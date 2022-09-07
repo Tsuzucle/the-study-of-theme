@@ -691,7 +691,7 @@ header {
 }
 
 .slider-item01 {
-  background-image: url(../img/IMG_0038a.jpg);
+  background-image: url({{ 'logo.jpeg' | asset_img_url: '3000x'}});/*../img/IMG_0038a.jpg */
 }
 
 .slider-item02 {
