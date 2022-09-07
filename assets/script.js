@@ -88,7 +88,7 @@ $('.gallery').on('beforeChange', function(event, slick, currentSlide, nextSlide)
 
 
 function toggleNav() {
-  var body = document.body;
+  var body = document.header;
   var hamburger = document.getElementById('js-hamburger');
    var blackBg = document.getElementById('js-black-bg');
 
