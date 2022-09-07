@@ -202,7 +202,7 @@
     {{ 'style.css' | asset_url | stylesheet_tag }}
     {{ 'style.min.css' | asset_url | stylesheet_tag }}
     {{ 'script.js' | asset_url | stylesheet_tag }}
-    {{ 'jquery-3.4.1.min.js' | asset_url | stylesheet_tag }}
+
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -226,6 +226,12 @@
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
+
+    <script src="https://kit.fontawesome.com/14c63bdccc.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
