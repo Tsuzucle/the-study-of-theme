@@ -1,5 +1,5 @@
 <section class="sec sec03">
-    <h2>2022 NEW COLLECTION "APPLAUSE"</h2>
+    <h2>{{ section.settings.title }}</h2>
     <div class="popular_product flex">
         {% assign product = all_products[section.settings.productA] %}
       <img src="{{product.featured_image.src | img_url: '3000x'}}" alt="" class="img">
@@ -30,6 +30,12 @@
   {
       "name": "Toppage Product",
       "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Collections",
+        "label": "Toppage Product Title"
+      },
       {
               "type": "product",
               "id": "productA",
