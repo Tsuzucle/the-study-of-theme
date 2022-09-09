@@ -1,11 +1,11 @@
 <section class="sec sec03">
     <h2>土曜限定販売の大人気商品</h2>
     <div class="popular_product flex">
-        {% assign productA = all_products[block.settings.productA] %}
+        {% assign product = all_products[block.settings.productA] %}
       <img src="{{productA.featured_image.src | img_url: '3000x'}}" alt="" class="img">
       <div class="product__detail">
         <div class="product__detail__main">
-          <h2><span>{{ productA.title }}</span></h2>
+          <h2><span>{{ product.title }}</span></h2>
           <p class="price">{{ productA.price }}</p>
         </div>
         <div class="product__detail__text">
