@@ -53,10 +53,23 @@
     "name": "collection-list",
     "settings": [
       {
-        "type": "featured_collection",
+        "type": "collection",
         "id": "collection",
         "label": "collection-list"
       }
-    ]
+    ],
+    "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "t:sections.collection-list.blocks.featured_collection.name",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        }
+      ]
     }
+  ]
+}
 {% endschema %}
