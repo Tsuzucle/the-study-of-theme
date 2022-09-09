@@ -147,6 +147,12 @@
         "settings": {
           "toppage_collection": "janbo-collection"
         }
+      },
+      "section-product": {
+        "type": "section-product",
+        "settings": {
+          "toppage_product": "シャバ臓焼き-冷凍"
+        }
       }
     },
     "content_for_index": [
