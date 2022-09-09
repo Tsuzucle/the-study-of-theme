@@ -167,12 +167,40 @@
           "2cf5bc8b-eb24-4d6d-b72d-821cc1f01d7a": {
             "type": "featured_collection",
             "settings": {
+              "collection": "janbo-collection"
+            }
+          },
+          "a59b4cbf-3b18-4be5-a752-78f32faaaf98": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "13ef6b5a-ea4a-42ca-a1b6-835fda08e70d": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "a1af9714-71b4-42e5-9f61-8c6c38be037a": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "9de6ac1a-0dc0-40a6-bc74-c7860abd25e4": {
+            "type": "featured_collection",
+            "settings": {
               "collection": ""
             }
           }
         },
         "block_order": [
-          "2cf5bc8b-eb24-4d6d-b72d-821cc1f01d7a"
+          "2cf5bc8b-eb24-4d6d-b72d-821cc1f01d7a",
+          "a59b4cbf-3b18-4be5-a752-78f32faaaf98",
+          "13ef6b5a-ea4a-42ca-a1b6-835fda08e70d",
+          "a1af9714-71b4-42e5-9f61-8c6c38be037a",
+          "9de6ac1a-0dc0-40a6-bc74-c7860abd25e4"
         ],
         "settings": {
         }
