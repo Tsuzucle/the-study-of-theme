@@ -160,6 +160,22 @@
         "settings": {
           "collection": ""
         }
+      },
+      "section-collection-list-test": {
+        "type": "section-collection-list-test",
+        "blocks": {
+          "2cf5bc8b-eb24-4d6d-b72d-821cc1f01d7a": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "2cf5bc8b-eb24-4d6d-b72d-821cc1f01d7a"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
