@@ -1088,7 +1088,7 @@ header {
   -ms-flex-positive: 1;
   flex-grow: 1;
   position: relative;
-  background-image: url("{{ collection.image | image_url: width: 1048 | image_tag }}");
+  background-image: url("{{ collection.image | image_url | image_tag }}");
   background-position: center;
 }
 
