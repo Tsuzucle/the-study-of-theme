@@ -153,6 +153,12 @@
         "settings": {
           "productA": "シャバ臓焼き-冷凍"
         }
+      },
+      "section-collection-list": {
+        "type": "section-collection-list",
+        "settings": {
+          "collection": ""
+        }
       }
     },
     "content_for_index": [
