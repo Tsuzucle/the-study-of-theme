@@ -1,5 +1,5 @@
 <section class="sec sec03">
-    <h2>土曜限定販売の大人気商品</h2>
+    <h2>{{ text.title }}</h2>
     <div class="popular_product flex">
         {% assign product = all_products[section.settings.productA] %}
       <img src="{{product.featured_image.src | img_url: '3000x'}}" alt="" class="img">
@@ -30,7 +30,13 @@
   {
       "name": "Toppage Product",
       "settings": [
-          {
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Collections",
+        "label": "t:sections.collection-list.settings.title.label"
+      },
+      {
               "type": "product",
               "id": "productA",
               "label": "Toppage_product"
