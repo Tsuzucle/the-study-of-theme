@@ -2,7 +2,7 @@
     <div class="items-wrapper flex">
         {%- for block in section.blocks -%}
             
-            {% render 'card-collection-test', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
+            {% render 'card-collection-test', collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
 
         {%- endfor -%}
     </div>
