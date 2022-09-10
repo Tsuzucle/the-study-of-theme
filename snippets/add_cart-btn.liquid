@@ -8,7 +8,6 @@
           <div class="product-form__input product-form__quantity" style="padding-top: 0.5em;" >
                        <quantity-input class="quantity">
                          <button class="quantity__button no-js-hidden" name="minus" type="button">
-                          
                            {% render 'icon-minus' %}
                          </button>
                          <input class="quantity__input"
@@ -17,17 +16,15 @@
                              id="Quantity-{{ forloop.index }}"
                              min="1"
                              value="1"
-                            
                            >
                          <button class="quantity__button no-js-hidden" name="plus" type="button">
-                          
                            {% render 'icon-plus' %}
                          </button>
                        </quantity-input>
             </div>
          
          <div style="padding-top: 1em;">
-           <input class="product-form__submit button button--full-width　Btn02 bgleft02" type="submit" value="{% if product.variants.first.available %}カートに追加する{% else %}売り切れ{% endif%}" class="btn" {% unless product.variants.first.available %}disabled{% endunless %} />
+           <input class="product-form__submit button button--full-width Btn02 bgleft02" type="submit" value="{% if product_card.variants.first.available %}カートに追加する{% else %}売り切れ{% endif%}" class="btn" {% unless product_card.variants.first.available %}disabled{% endunless %} />
          </div>
        
        </form>
