@@ -3,28 +3,33 @@
         <button class="Btn02 bgleft02" type="submit" name="add" id="AddToCart">カートに追加する</button>
       </form> -->
 
-      <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
-        <input type="hidden" name="id" value="{{ product_card_product.variants.first.id }}" />
-          <div class="product-form__input product-form__quantity" style="padding-top: 0.5em;" >
-                       <quantity-input class="quantity">
-                         <button class="quantity__button no-js-hidden" name="minus" type="button">
-                           {% render 'icon-minus' %}
-                         </button>
-                         <input class="quantity__input"
-                             type="number"
-                             name="quantity"
-                             id="Quantity-{{ forloop.index }}"
-                             min="1"
-                             value="1"
-                           >
-                         <button class="quantity__button no-js-hidden" name="plus" type="button">
-                           {% render 'icon-plus' %}
-                         </button>
-                       </quantity-input>
-            </div>
-         
-         <div style="padding-top: 1em;">
-           <input class="product-form__submit button button--full-width Btn02 bgleft02" id="AddToCart" type="submit" value="{% if product_card.variants.first.available %}カートに追加する{% else %}売り切れ{% endif%}" class="btn" {% unless product_card.variants.first.available %}disabled{% endunless %} />
-         </div>
-       
-       </form>
+      {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                  <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
+                  <button
+                    id="{{ product_form_id }}-submit"
+                    type="submit"
+                    name="add"
+                    class="quick-add__submit button button--full-width button--secondary"
+                    aria-haspopup="dialog"
+                    aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                    aria-live="polite"
+                    data-sold-out-message="true"
+                    {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                  >
+                    <span>
+                      {%- if card_product.selected_or_first_available_variant.available -%}
+                        {{ 'products.product.add_to_cart' | t }}
+                      {%- else -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- endif -%}
+                    </span>
+                    <span class="sold-out-message hidden">
+                      {{ 'products.product.sold_out' | t }}
+                    </span>
+                    <div class="loading-overlay__spinner hidden">
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      </svg>
+                    </div>
+                  </button>
+                {%- endform -%}
