@@ -3,33 +3,35 @@
         <button class="Btn02 bgleft02" type="submit" name="add" id="AddToCart">カートに追加する</button>
       </form> -->
 
-      {%- form 'productA', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                  <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
-                  <button
-                    id="{{ product_form_id }}-submit"
-                    type="submit"
-                    name="add"
-                    class="quick-add__submit button button--full-width button--secondary"
-                    aria-haspopup="dialog"
-                    aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                    aria-live="polite"
-                    data-sold-out-message="true"
-                    {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                  >
-                    <span>
-                      {%- if card_product.selected_or_first_available_variant.available -%}
-                        {{ 'products.product.add_to_cart' | t }}
-                      {%- else -%}
-                        {{ 'products.product.sold_out' | t }}
-                      {%- endif -%}
-                    </span>
-                    <span class="sold-out-message hidden">
-                      {{ 'products.product.sold_out' | t }}
-                    </span>
-                    <div class="loading-overlay__spinner hidden">
-                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
-                    </div>
-                  </button>
-                {%- endform -%}
+      <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
+        <!--<label for="#">お渡し用袋</label>
+          <select name="" id="">
+            <option value="不要">不要</option>
+            <option value="要">要</option>
+          </select> -->
+          <div class="counter">
+            <label for="number">数量</label>
+                <div class="line_item_count">
+                    <!-- <div class="minus_btn">-</div>1<div class="plus_btn">+</div> -->
+                    <input type="number" name="updates[]" class="btn btn-default" value="1" min="1" pattern="[0-9]*">
+                </div>
+
+          </div>
+
+
+
+        <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
+
+        
+        {%- if variant.inventory_quantity  > 0 -%}
+            <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
+            {%- if variant.inventory_quantity  < 10 -%}
+                <span style="color:red;">残り在庫 {{ variant.inventory_quantity }} 個です</span>
+            {%- endif -%}
+        {%- else -%}
+
+        <div class="Btn02"><span>在庫なし</span></div>
+        
+        {%- endif -%}
+        
+      </form>
