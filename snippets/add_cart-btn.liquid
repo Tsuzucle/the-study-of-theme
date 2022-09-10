@@ -3,7 +3,7 @@
         <button class="Btn02 bgleft02" type="submit" name="add" id="AddToCart">カートに追加する</button>
       </form> -->
 
-      <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
+      < method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
         <!--<label for="#">お渡し用袋</label>
           <select name="" id="">
             <option value="不要">不要</option>
@@ -23,9 +23,9 @@
         <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
 
         
-        {%- if product.variants.inventory_quantity  > 0 -%}
+        {%- if product.variants.inventory_quantity > 0 -%}
             <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
-            {%- if product.variants.inventory_quantity  < 10 -%}
+            {%- if product.variants.inventory_quantity < 10 -%}
                 <span style="color:red;">残り在庫 {{ product.variants.inventory_quantity }} 個です</span>
             {%- endif -%}
         {%- else -%}
