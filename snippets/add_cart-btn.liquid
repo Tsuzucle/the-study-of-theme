@@ -23,10 +23,10 @@
         <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
 
         
-        {%- if product.inventory_quantity  > 0 -%}
+        {%- if product.variants.inventory_quantity  > 0 -%}
             <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
-            {%- if product.inventory_quantity  < 10 -%}
-                <span style="color:red;">残り在庫 {{ product.inventory_quantity }} 個です</span>
+            {%- if product.variants.inventory_quantity  < 10 -%}
+                <span style="color:red;">残り在庫 {{ product.variants.inventory_quantity }} 個です</span>
             {%- endif -%}
         {%- else -%}
 
