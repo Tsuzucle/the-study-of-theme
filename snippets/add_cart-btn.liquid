@@ -3,15 +3,15 @@
         <button class="Btn02 bgleft02" type="submit" name="add" id="AddToCart">カートに追加する</button>
       </form> -->
 
-      {%- form 'product', card_product, id: productA, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+      {%- form 'productA', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
                   <button
-                    id="{{ productA }}-submit"
+                    id="{{ product_form_id }}-submit"
                     type="submit"
                     name="add"
                     class="quick-add__submit button button--full-width button--secondary"
                     aria-haspopup="dialog"
-                    aria-labelledby="{{ productA }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                    aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                     aria-live="polite"
                     data-sold-out-message="true"
                     {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
