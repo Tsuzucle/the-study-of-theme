@@ -3,7 +3,7 @@
         <button class="Btn02 bgleft02" type="submit" name="add" id="AddToCart">カートに追加する</button>
       </form> -->
 
-      <form action="/cart/add" method="post">
+      <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
         <input type="hidden" name="id" value="{{ product_card_product.variants.first.id }}" />
           <div class="product-form__input product-form__quantity" style="padding-top: 0.5em;" >
                        <quantity-input class="quantity">
@@ -24,7 +24,7 @@
             </div>
          
          <div style="padding-top: 1em;">
-           <input class="product-form__submit button button--full-width Btn02 bgleft02" type="submit" value="{% if product_card.variants.first.available %}カートに追加する{% else %}売り切れ{% endif%}" class="btn" {% unless product_card.variants.first.available %}disabled{% endunless %} />
+           <input class="product-form__submit button button--full-width Btn02 bgleft02" id="AddToCart" type="submit" value="{% if product_card.variants.first.available %}カートに追加する{% else %}売り切れ{% endif%}" class="btn" {% unless product_card.variants.first.available %}disabled{% endunless %} />
          </div>
        
        </form>
