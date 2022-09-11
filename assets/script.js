@@ -141,3 +141,18 @@ $(window).on('load',function(){
 
 //})   ！！右側カートサイドバーを使うときの記載！！
 
+//数量セレクタに動きを追加
+$('.qtybox .btnqty').on('click', function(){
+	var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
+//liquidで作成した変数をJSの変数に格納
+	// var inventory_limit = {{ current_variant }};
+	if($(this).hasClass('qtyplus')) {
+	  qty++;
+	}else {
+	  if(qty > 1) {
+		qty--;
+	  }
+	}
+	qty = (isNaN(qty))?1:qty;
+	$(this).parent('.qtybox').find('.quantity-input').val(qty);
+  });
