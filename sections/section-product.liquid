@@ -1,5 +1,5 @@
 <section class="sec sec03">
-    <h2>{{ section.settings.title }}</h2>
+    <h2>土曜限定販売の大人気商品</h2>
     <div class="popular_product flex">
         {% assign product = all_products[section.settings.productA] %}
       <img src="{{product.featured_image.src | img_url: '3000x'}}" alt="" class="img">
@@ -52,7 +52,7 @@
 	var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
 //liquidで作成した変数をJSの変数に格納
 	// var inventory_limit = {{ current_variant }};
-	if($(this).hasClass('qtyplus') && qty < {% current_variant.inventory_quantity %}) {
+	if($(this).hasClass('qtyplus')) {
 	  qty++;
 	}else {
 	  if(qty > 1) {
@@ -68,12 +68,6 @@
   {
       "name": "Toppage Product",
       "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "default": "Collections",
-        "label": "Toppage Product Title"
-      },
       {
               "type": "product",
               "id": "productA",
