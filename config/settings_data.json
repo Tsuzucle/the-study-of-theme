@@ -14,19 +14,13 @@
       "section-collection": {
         "type": "section-collection",
         "settings": {
-          "toppage_collection": ""
+          "toppage_collection": "janbo-collection"
         }
       },
       "section-product": {
         "type": "section-product",
         "settings": {
-          "title": "Collections",
-          "productA": "シャバ臓焼き-冷凍"
-        }
-      },
-      "section-collection-list-test": {
-        "type": "section-collection-list-test",
-        "settings": {
+          "productA": "商品1"
         }
       },
       "section-introduce": {
@@ -36,6 +30,21 @@
       },
       "footer": {
         "type": "footer",
+        "settings": {
+        }
+      },
+      "section-collection-list": {
+        "type": "section-collection-list",
+        "settings": {
+        }
+      },
+      "section-special": {
+        "type": "section-special",
+        "settings": {
+        }
+      },
+      "section-category": {
+        "type": "section-category",
         "settings": {
         }
       }
