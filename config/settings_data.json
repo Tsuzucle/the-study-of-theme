@@ -35,6 +35,45 @@
       },
       "section-collection-list": {
         "type": "section-collection-list",
+        "blocks": {
+          "45c03047-30a4-4655-8a83-7cc30e690288": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "fbf30ffc-97e3-4ef4-914f-87fa9fb763ab": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "0671eb23-0527-44d3-8742-0f5bfea52f5d": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "bff8727f-7df9-4e5e-9e30-7afc9fa8c0c0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "2b8ed5be-27dd-44d0-9196-5cf98e4142bf": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "45c03047-30a4-4655-8a83-7cc30e690288",
+          "fbf30ffc-97e3-4ef4-914f-87fa9fb763ab",
+          "0671eb23-0527-44d3-8742-0f5bfea52f5d",
+          "bff8727f-7df9-4e5e-9e30-7afc9fa8c0c0",
+          "2b8ed5be-27dd-44d0-9196-5cf98e4142bf"
+        ],
         "settings": {
         }
       },
