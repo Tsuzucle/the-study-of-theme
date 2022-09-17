@@ -35,11 +35,11 @@ a {
 }
 
 .Btn:hover span {
-  color: #fff;
+  color: #000;
 }
 
 .Btn-wrapper {
-  background: #fff;
+  background: #000;
   color: #5c5c5c;
   text-align: center;
   padding: 14px 28px;
@@ -47,8 +47,8 @@ a {
 }
 
 .Btn02 {
-  color: #fff;
-  background: #b7282e;
+  color: #000;
+  background: #B1BDC5;
   font-size: 1.1vw;
   padding: 14px 0;
   -webkit-box-sizing: border-box;
@@ -75,13 +75,13 @@ a {
   position: relative;
   z-index: 3;
   /*z-indexの数値をあげて文字を背景よりも手前に表示*/
-  color: #EFEBEB;
+  color: #000;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
 .Btn02:hover span {
-  color: #b7282e;
+  color: #B1BDC5;
 }
 
 /*== 背景が流れる（左から右） */
@@ -93,7 +93,7 @@ a {
   left: 0;
   z-index: 2;
   /*色や形状*/
-  background: #EFEBEB;
+  background: #000;
   /*背景色*/
   width: 100%;
   height: 100%;
@@ -106,7 +106,7 @@ a {
           transform: scale(0, 1);
   -webkit-transform-origin: right top;
           transform-origin: right top;
-  border: 1px solid #b7282e;
+  border: 1px solid #B1BDC5;
 }
 
 .bgleft:before {
@@ -117,7 +117,7 @@ a {
   left: 0;
   z-index: 2;
   /*色や形状*/
-  background: #b7282e;
+  background: #B1BDC5;
   /*背景色*/
   width: 100%;
   height: 100%;
@@ -130,7 +130,7 @@ a {
           transform: scale(0, 1);
   -webkit-transform-origin: right top;
           transform-origin: right top;
-  border: 1px solid #b7282e;
+  border: 1px solid #B1BDC5;
 }
 
 /*hoverした際の形状*/
@@ -154,16 +154,16 @@ a {
 }
 
 body {
-  color: #fff;
-  background: #2b2b2b;
+  color: #000;
+  background: #fff;
   letter-spacing: 0.06em;
   -webkit-font-smoothing: antialiased;
   font-family: serif;
 }
 
 header {
-  border-bottom: 2px solid #b7282e;
-  background: #2b2b2b;
+  border-bottom: 2px solid;
+  background: #fff;
   position: fixed;
   top: 0;
   width: 100%;
@@ -202,7 +202,7 @@ header {
 .header .icon-wrap span{
   width: 15px;
   height: 15px;
-  background: #ff4500;
+  background: #B1BDC5;
   border-radius: 50%;
   content: "";
   position: absolute;
@@ -278,7 +278,7 @@ header {
   /* スマホに収まるサイズ */
   height: 100vh;
   padding-top: 60px;
-  background-color: #2b2b2b;
+  background-color: #fff;
   -webkit-transition: all .6s;
   transition: all .6s;
   z-index: 200;
@@ -310,7 +310,7 @@ header {
 .nav ul li a {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   padding: 15px;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -340,8 +340,8 @@ header {
   top: 21px;
   width: 6px;
   height: 6px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -380,7 +380,7 @@ header {
 }
 
 .nav li.has-child ul li a {
-  color: #fff;
+  color: #000;
   border-bottom: solid 1px rgba(255, 255, 255, 0.6);
 }
 
@@ -425,7 +425,7 @@ header {
 .nav li.has-child ul ul li a,
 .nav li.has-child ul ul ul li a {
   border-bottom: 1px solid #ccc;
-  color: #fff;
+  color: #000;
 }
 
 .nav li.has-child ul ul li.has-child::before,
@@ -486,7 +486,7 @@ header {
   left: 11px;
   width: 18px;
   height: 2px;
-  background-color: #fff;
+  background-color: #000;
   -webkit-transition: all .6s;
   transition: all .6s;
 }
@@ -642,24 +642,24 @@ header {
   padding: 0 2vw;
   -webkit-transition: .3s;
   transition: .3s;
-  color: #fff;
+  color: #000;
   text-align: center;
   margin-top: 20px;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #000;
+  border: 1px solid #000;
   width: 30%;
 }
 
 .slider-item a span {
-  color: #fff;
+  color: #000;
 }
 
 .slider-item a::before {
-  background: #fff;
+  background: #000;
 }
 
 .slider-item a:hover span {
-  color: #fff;
+  color: #000;
   border: none;
 }
 
@@ -676,7 +676,7 @@ header {
 
 .slider-item .copy_area p,
 .slider-item .copy_area h2 {
-  color: #fff;
+  color: #000;
 }
 
 .slider-item .copy_area h2 {
@@ -691,19 +691,19 @@ header {
 }
 
 .slider-item01 {
-  background-image: url("{{'IMG_0038a.jpg' | asset_img_url: '3000x'}}");
+  background-image: url("{{'fv-1.jpeg' | asset_img_url: '3000x'}}");
 }
 
 .slider-item02 {
-  background-image: url("{{'IMG_0034a.jpg' | asset_img_url: '3000x'}}");
+  background-image: url("{{'fv-2.jpeg' | asset_img_url: '3000x'}}");
 }
 
 .slider-item03 {
-  background-image: url("{{'IMG_0054.jpg' | asset_img_url: '3000x'}}");
+  background-image: url("{{'fv-3.jpeg' | asset_img_url: '3000x'}}");
 }
 
 .slider-item04 {
-  background-image: url("{{'IMG_0095a.jpg' | asset_img_url: '3000x'}}");
+  background-image: url("{{'fv-4.jpeg' | asset_img_url: '3000x'}}");
 }
 
 /*矢印の設定*/
@@ -716,9 +716,9 @@ header {
   /*マウスカーソルを指マークに*/
   outline: none;
   /*クリックをしたら出てくる枠線を消す*/
-  border-top: 2px solid #fff;
+  border-top: 2px solid #000;
   /*矢印の色*/
-  border-right: 2px solid #fff;
+  border-right: 2px solid #000;
   /*矢印の色*/
   height: 25px;
   width: 25px;
@@ -761,12 +761,12 @@ header {
   /*ドットボタンのサイズ*/
   display: block;
   border-radius: 50%;
-  background: #fff;
+  background: #000;
   /*ドットボタンの色*/
 }
 
 .slick-dots .slick-active button {
-  background: #b7282e;
+  background: #B1BDC5;
   /*ドットボタンの現在地表示の色*/
 }
 
@@ -1102,7 +1102,7 @@ header {
 .sec04 .items-wrapper .item {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #fff;
+  color: #000;
   background: #434343;
   height: 500px;
   min-width: 30.33333%;
@@ -1152,7 +1152,7 @@ header {
 }
 
 .sec04 .items-wrapper .item__content .Btn-wrapper {
-  background: #fff;
+  background: #000;
   color: #5c5c5c;
   text-align: center;
   padding: 14px 28px;
@@ -1169,12 +1169,12 @@ header {
 .sec05 .Btn {
   margin-left: 0;
   margin-top: 20px;
-  border: 2px solid #fff;
+  border: 2px solid #000;
 }
 
 .sec04 .Btn span,
 .sec05 .Btn span {
-  color: #fff;
+  color: #000;
 }
 
 @media (min-width: 1920px) {
@@ -1255,7 +1255,7 @@ header {
 }
 
 .sec05 .bkimg__contents {
-  background-image: url("{{'richBurgBG.jpg' | asset_img_url: '3000x'}}");
+  background-image: url("{{'bg-1.jpeg' | asset_img_url: '3000x'}}");
   background-attachment: fixed;
   background-size: 100%;
   background-position: center;
@@ -1291,7 +1291,7 @@ header {
 
 .sec05 .bkimg__contents__txtBox {
   padding: 0 70px;
-  color: #fff;
+  color: #000;
 }
 
 .sec05 .bkimg__contents__txtBox h2 {
@@ -1362,7 +1362,7 @@ header {
 
 .special__contents .txt-side {
   width: 50%;
-  background-color: #fff;
+  background-color: #B1BDC5;
   position: relative;
 }
 
@@ -1522,7 +1522,7 @@ header {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     left: 50%;
-    color: #fff;
+    color: #000;
     z-index: 3;
     margin-top: 3vw;
   }
@@ -1598,7 +1598,7 @@ header {
           box-shadow: 5px 5px 10px #939393;
   width: 48.5%;
   display: block;
-  background: #fff;
+  background: #B1BDC5;
 }
 
 .category__item:nth-of-type(n+3) {
@@ -1663,19 +1663,19 @@ header {
 }
 
 ::-webkit-input-placeholder {
-  color: #EFEBEB;
+  color: #000;
 }
 
 :-ms-input-placeholder {
-  color: #EFEBEB;
+  color: #000;
 }
 
 ::-ms-input-placeholder {
-  color: #EFEBEB;
+  color: #000;
 }
 
 ::placeholder {
-  color: #EFEBEB;
+  color: #000;
 }
 
 .product .sec03 {
@@ -1778,7 +1778,7 @@ header {
 }
 
 .product .sec03 .product__wrap select {
-  background: #fff;
+  background: #B1BDC5;
   display: block;
   width: 100%;
   padding: 15px;
@@ -2001,7 +2001,7 @@ header {
 }
 
 .aboutUs__sec01 .shops .shop {
-  background: #fff;
+  background: #B1BDC5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2019,8 +2019,8 @@ header {
 }
 
 .aboutUs__sec01 .shops .shop:hover {
-  -webkit-box-shadow: 10px 10px 25px #EFEBEB;
-          box-shadow: 10px 10px 25px #EFEBEB;
+  -webkit-box-shadow: 10px 10px 25px #000;
+          box-shadow: 10px 10px 25px #000;
 }
 
 .aboutUs__sec01 .shops .shop:nth-child(n+3) {
@@ -2115,7 +2115,7 @@ header {
 }
 
 footer {
-  background-color: #b7282e;
+  background-color: #B1BDC5;
   padding: 40px;
 }
 
