@@ -1,62 +1,19 @@
 <section class="sec04 sec">
     <div class="items-wrapper flex">
-      <a href="product.html" class="item">
-        <div class="item__content">
-          <h3>NEW COLLECTION</h3>
-          <div class="Btn bgleft bgleft03">
-            <span>もっと見る</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="product.html" class="item">
-        <div class="item__content">
-          <h3>NEW COLLECTION</h3>
-          <div class="Btn bgleft bgleft03">
-            <span>もっと見る</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="product.html" class="item">
-        <div class="item__content">
-          <h3>NEW COLLECTION</h3>
-          <div class="Btn bgleft bgleft03">
-            <span>もっと見る</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="product.html" class="item">
-        <div class="item__content">
-          <h3>NEW COLLECTION</h3>
-          <div class="Btn bgleft bgleft03">
-            <span>もっと見る</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="product.html" class="item">
-        <div class="item__content">
-          <h3>NEW COLLECTION</h3>
-          <div class="Btn bgleft bgleft03">
-            <span>もっと見る</span>
-          </div>
-        </div>
-      </a>
-
+        {%- for block in section.blocks -%}
+            {% render 'card-collection-test', collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
+        {%- endfor -%}
     </div>
-  </section>
+</section>
 
-  {% schema %}
-  {
-    "name": "collection-list",
+
+{% schema %}
+{
+    "name": "t:sections.collection-list.name",
+    "tag": "section",
+    "class": "section section-collection-list",
+    "max_blocks": 15,
     "settings": [
-      {
-        "type": "collection",
-        "id": "collection",
-        "label": "collection-list"
-      }
     ],
     "blocks": [
     {
@@ -70,6 +27,6 @@
         }
       ]
     }
-  ]
+    ]
 }
 {% endschema %}
