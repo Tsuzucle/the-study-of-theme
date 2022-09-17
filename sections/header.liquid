@@ -1,13 +1,41 @@
 <header class="header">
     <div class="header_inner">
-      {% render 'nav_menu' %}
+      <nav class="nav">
+        <ul class="nav_list">
+          {% for link in linklists.main-menu.links %}
+          {% assign child_list_handle = link.title | handleize %}
+          {% if linklists[child_list_handle].links != blank %}
+            <li class="has-child"><a href="{{ link.url }}">{{ link.title }}</a>
+              <ul>
+                {% for childlink in linklists[child_list_handle].links %}
+                {% assign son_list_handle = childlink.title | handleize %}
+                {% if linklists[son_list_handle].links != blank %}
+                  <li class="has-child"><a href="{{ childlink.url }}">{{ childlink.title }}</a>
+                    <ul>
+                      {% for sonlink in linklists[son_list_handle].links %}
+                        <li><a href="{{ sonlink.url }}">{{ sonlink.title }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </li>
+                  {% else %}
+                  <li><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
+                {% endif %}
+                {% endfor %}
+              </ul>
+            </li>
+            {% else %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
     </div>
     <div class="hamburger" id="js-hamburger">
       <span class="hamburger_border hamburger_border_top"></span>
       <span class="hamburger_border hamburger_border_center"></span>
       <span class="hamburger_border hamburger_border_bottom"></span>
     </div>
-    <a href="{{shop.url}}" class="logo">
+    <a href="{{ shop.url }}" class="logo">
       <img src="{{ 'jambo_header_logo.png' | asset_img_url }}" alt="">
     </a>
     <ul class="icon-wrap">
