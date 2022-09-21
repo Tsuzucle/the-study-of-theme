@@ -86,6 +86,12 @@
         "type": "section-category",
         "settings": {
         }
+      },
+      "section-collection-test": {
+        "type": "section-collection-test",
+        "settings": {
+          "toppage_collection": "janbo-collection"
+        }
       }
     },
     "content_for_index": [
