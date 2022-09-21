@@ -90,7 +90,7 @@
       "section-product-test": {
         "type": "section-product-test",
         "settings": {
-          "toppage-product": "商品1"
+          "toppage_product": "商品1"
         }
       }
     },
