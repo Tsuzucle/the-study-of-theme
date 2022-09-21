@@ -87,10 +87,10 @@
         "settings": {
         }
       },
-      "section-collection-test": {
-        "type": "section-collection-test",
+      "section-product-test": {
+        "type": "section-product-test",
         "settings": {
-          "toppage_collection": "janbo-collection"
+          "toppage-product": "商品1"
         }
       }
     },
