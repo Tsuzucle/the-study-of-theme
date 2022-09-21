@@ -1,11 +1,12 @@
 <section class="sec sec03">
     <h2>土曜限定販売の大人気商品</h2>
     <div class="popular_product flex">
+    {% assign product = all_products[section.settings.toppage_product] %}
       <img src="{{product.featured_image.src | img_url: '3000x'}}" alt="" class="img">
       <div class="product__detail">
         <div class="product__detail__main">
-          <h2><span>生ガトーショコラ</span></h2>
-          <p class="price">¥2,700</p>
+          <h2><span>{{ product.title }}</span></h2>
+          <p class="price">{{ product.price }}</p>
         </div>
         <div class="product__detail__text">
           <p>チョコレートをたっぷり使用し、小麦粉不使用でチョコレート・バター・卵のみでリッチに仕上げました。カカオニブとレアに焼き上げたガトーショコラの食感が絶妙。外はさっくり、中はとろりレアに。</p>
@@ -40,7 +41,7 @@
       "settings": [
       {
               "type": "product",
-              "id": "toppage-product",
+              "id": "toppage_product",
               "label": "Toppage_product"
           }
       ]
