@@ -146,7 +146,7 @@ $('.qtybox .btnqty').on('click', function(){
 	var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
 //liquidで作成した変数をJSの変数に格納
 	var inventory_limit = {{ current_variant }};
-	if($(this).hasClass('qtyplus') && (qty < inventory_limit)) {
+	if(($(this).hasClass('qtyplus')) && (qty < inventory_limit)) {
 	  qty++;
 	}else {
 	  if(qty > 1) {
