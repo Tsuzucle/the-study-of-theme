@@ -33,6 +33,7 @@
           <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
 
           {% assign current_variant = product.selected_or_first_available_variant %}
+          {% assign inventory_quantity = product.selected_or_first_available_variant.inventory_quantity %}
           {% if current_variant.inventory_quantity > 0 %}
             <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
           {% else %}
@@ -45,7 +46,23 @@
     </div>
   </section>
 
-
+  <script>
+    //数量セレクタに動きを追加
+$('.qtybox .btnqty').on('click', function(){
+	var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
+//liquidで作成した変数をJSの変数に格納
+  var inventory_quantity = {{ inventory_quantity }}
+	if(($(this).hasClass('qtyplus')) && (qty < inventory_quantity)) {
+	  qty++;
+	}else {
+	  if(qty > 1) {
+		qty--;
+	  }
+	}
+	qty = (isNaN(qty))?1:qty;
+	$(this).parent('.qtybox').find('.quantity-input').val(qty);
+  });
+  </script>
 
   {% schema %}
   {
