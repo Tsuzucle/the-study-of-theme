@@ -16,7 +16,6 @@
 
         <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
             <div class="qtydiv counter">
-              <label for="Quantity" class="quantity-selector">quantity</label>
                 <div class="qtybox">
                   <span class="btnqty qtyminus icon icon-minus"><i class="fas fa-minus"></i></span>
                   <input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector quantity-input" readonly="">
@@ -34,7 +33,6 @@
           <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
 
           {% assign current_variant = product.selected_or_first_available_variant %}
-          {% assign inventory_limit = product.selected_or_first_available_variant.inventory_quantity %}
           {% if current_variant.inventory_quantity > 0 %}
             <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
           {% else %}
@@ -46,24 +44,6 @@
       </div>
     </div>
   </section>
-
-  <script>
-    //数量セレクタに動きを追加
-$('.qtybox .btnqty').on('click', function(){
-	var qty = parseInt($(this).parent('.qtybox').find('.quantity-input').val());
-//liquidで作成した変数をJSの変数に格納
-	var inventory_limit = {{ inventory_limit }};
-	if(qty < inventory_limit) {
-	  qty++;
-	}else {
-	  if(qty > 1) {
-		qty--;
-	  }
-	}
-	qty = (isNaN(qty))?1:qty;
-	$(this).parent('.qtybox').find('.quantity-input').val(qty);
-  });
-  </script>
 
 
 
