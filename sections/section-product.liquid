@@ -34,7 +34,7 @@
           <input type="hidden" id="variant-id" name="id" value={{product.variants.first.id}}>
 
           {% assign current_variant = product.selected_or_first_available_variant %}
-          {% assign inventory_limit = current_variant.inventory_quantity %}
+          {% assign inventory_limit = product.selected_or_first_available_variant.inventory_quantity %}
           {% if current_variant.inventory_quantity > 0 %}
             <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに入れる</span></button>
           {% else %}
