@@ -25,6 +25,11 @@
                 </div>
     
             <input type="hidden" id="variant-id" name="id" value={{ product.variants.first.id }}>
+            <select name="id">
+                {%- for variant in product.variants -%}
+                    <option value="{{ variant.id }}">{{ variant.title | escape }}</option>
+                {%- endfor -%}
+             </select>
             
             {% assign current_variant = product.selected_or_first_available_variant %}
             {%- if current_variant.inventory_quantity > 0 -%}
