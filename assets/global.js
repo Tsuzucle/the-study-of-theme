@@ -768,9 +768,9 @@ class VariantSelects extends HTMLElement {
     }
   }
 
-  // updateOptions() {
-  //   this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
-  // }
+  updateOptions() {
+    this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
+  }
 
   updateMasterId() {
     this.currentVariant = this.getVariantData().find((variant) => {
@@ -804,14 +804,14 @@ class VariantSelects extends HTMLElement {
     shareButton.updateUrl(`${window.shopUrl}${this.dataset.url}?variant=${this.currentVariant.id}`);
   }
 
-  updateVariantInput() {
-    const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`);
-    productForms.forEach((productForm) => {
-      const input = productForm.querySelector('input[name="id"]');
-      input.value = this.currentVariant.id;
-      input.dispatchEvent(new Event('change', { bubbles: true }));
-    });
-  }
+  // updateVariantInput() {
+  //   const productForms = document.querySelectorAll(`#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`);
+  //   productForms.forEach((productForm) => {
+  //     const input = productForm.querySelector('input[name="id"]');
+  //     input.value = this.currentVariant.id;
+  //     input.dispatchEvent(new Event('change', { bubbles: true }));
+  //   });
+  // }
 
   updatePickupAvailability() {
     const pickUpAvailability = document.querySelector('pickup-availability');
