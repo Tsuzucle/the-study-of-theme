@@ -147,14 +147,14 @@ class QuantityInput extends HTMLElement {
     );
   }
 
-//   onButtonClick(event) {
-//     event.preventDefault();
-//     const previousValue = this.input.value;
+  onButtonClick(event) {
+    event.preventDefault();
+    const previousValue = this.input.value;
 
-//     event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
-//     if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
-//   }
-// }
+    event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
+    if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
+  }
+}
 
 customElements.define('quantity-input', QuantityInput);
 
@@ -187,15 +187,15 @@ Shopify.bind = function(fn, scope) {
   }
 };
 
-Shopify.setSelectorByValue = function(selector, value) {
-  for (var i = 0, count = selector.options.length; i < count; i++) {
-    var option = selector.options[i];
-    if (value == option.value || value == option.innerHTML) {
-      selector.selectedIndex = i;
-      return i;
-    }
-  }
-};
+// Shopify.setSelectorByValue = function(selector, value) {
+//   for (var i = 0, count = selector.options.length; i < count; i++) {
+//     var option = selector.options[i];
+//     if (value == option.value || value == option.innerHTML) {
+//       selector.selectedIndex = i;
+//       return i;
+//     }
+//   }
+// };
 
 Shopify.addListener = function(target, eventName, callback) {
   target.addEventListener ? target.addEventListener(eventName, callback, false) : target.attachEvent('on'+eventName, callback);
