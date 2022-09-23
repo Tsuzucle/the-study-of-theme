@@ -2,6 +2,7 @@
 
   <div class="items-wrapper flex">
     {% for block in section.blocks %}
+    {% assign collection = block.settings.collection %}
     <a href="{{ collection.url }}" class="item">
       <div class="item__content">
         <h3>NEW COLLECTION</h3>
