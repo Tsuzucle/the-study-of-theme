@@ -92,6 +92,29 @@
         "settings": {
           "toppage_product": "商品1"
         }
+      },
+      "section-collection-list-test": {
+        "type": "section-collection-list-test",
+        "blocks": {
+          "e7a4f69e-4316-4c03-8b7b-b916b52ea03d": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "janbo-collection"
+            }
+          },
+          "22a50bfa-e255-480a-adcf-f80ca8308b19": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "e7a4f69e-4316-4c03-8b7b-b916b52ea03d",
+          "22a50bfa-e255-480a-adcf-f80ca8308b19"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
