@@ -14,6 +14,7 @@
           </p>
         </div>
 
+          <div>
         {% form 'product' , product %}
           <div class="qtydiv counter">
             <div class="qtybox">
@@ -26,7 +27,7 @@
           {% assign current_variant = product.selected_or_first_available_variant %}
           {%- if current_variant.inventory_quantity > 0 -%}
               <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに追加する</span></button>
-              {%- if current_variant.inventory_quantity < 10 -%}
+              {%- if current_variant.inventory_quantity <div 10 -%}
                   <span style="color:red;">残り在庫 {{ current_variant.inventory_quantity }} 個です</span>
               {%- endif -%}
           {%- else -%}
@@ -34,6 +35,7 @@
           {%- endif -%}
           <a href="{{ product.url }}" class="link__detail">詳細を見る</a>
         {% endform %}
+        </div>
 
         <!-- <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
 
