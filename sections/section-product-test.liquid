@@ -14,7 +14,7 @@
           </p>
         </div>
 
-          <div>
+        
         {% form 'product' , product %}
           <div class="qtydiv counter">
             <div class="qtybox">
@@ -23,6 +23,8 @@
             <span class="btnqty qtyplus icon icon-plus"><i class="fas fa-plus"></i></span>
             </div>
           </div>
+
+          <input type="hidden" id="variant-id" name="id" value={{ product.variants.first.id }}>
 
           {% assign current_variant = product.selected_or_first_available_variant %}
           {%- if current_variant.inventory_quantity > 0 -%}
@@ -35,7 +37,7 @@
           {%- endif -%}
           <a href="{{ product.url }}" class="link__detail">詳細を見る</a>
         {% endform %}
-        </div>
+
 
         <!-- <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
 
