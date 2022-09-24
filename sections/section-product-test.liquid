@@ -14,12 +14,33 @@
           </p>
         </div>
 
-        <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
+        {% form 'product', product %}
+          <div class="qtydiv counter">
+            <div class="qtybox">
+            <span class="btnqty qtyminus icon icon-minus"><i class="fas fa-minus"></i></span>
+            <span><input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector quantity-input" readonly=""></span>
+            <span class="btnqty qtyplus icon icon-plus"><i class="fas fa-plus"></i></span>
+            </div>
+          </div>
+
+          {% assign current_variant = product.selected_or_first_available_variant %}
+          {%- if current_variant.inventory_quantity > 0 -%}
+              <button type="submit" class="Btn02 bgleft02" name="add" id="AddToCart" ><span>カートに追加する</span></button>
+              {%- if current_variant.inventory_quantity < 10 -%}
+                  <span style="color:red;">残り在庫 {{ current_variant.inventory_quantity }} 個です</span>
+              {%- endif -%}
+          {%- else -%}
+          <div class="Btn02"><span>在庫なし</span></div>
+          {%- endif -%}
+          <a href="{{ product.handle }}" class="link__detail">詳細を見る</a>
+        {% endform %}
+
+        <!-- <form method="post" action="/cart/add" enctype="multipart/form-data" id="AddToCartForm">
 
                 <div class="qtydiv counter">
                     <div class="qtybox">
                     <span class="btnqty qtyminus icon icon-minus"><i class="fas fa-minus"></i></span>
-                    <input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector quantity-input" readonly="">
+                    <span><input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector quantity-input" readonly=""></span>
                     <span class="btnqty qtyplus icon icon-plus"><i class="fas fa-plus"></i></span>
                     </div>
                 </div>
@@ -36,15 +57,15 @@
             <div class="Btn02"><span>在庫なし</span></div>
             {%- endif -%}
             <a href="{{ product.handle }}" class="link__detail">詳細を見る</a>
-          </form>
+          </form> -->
 
 
         <!-- <div class="counter">
           <span><i class="fas fa-minus"></i></span>
           <span>1</span>
           <span><i class="fas fa-plus"></i></span>
-        </div>
-        <button href="#" class="Btn02 bgleft02">
+        </div> -->
+        <!-- <button href="#" class="Btn02 bgleft02">
           <span>カートに追加する</span>
         </button>
         <a href="/product.html" class="link__detail">詳細を見る</a>
