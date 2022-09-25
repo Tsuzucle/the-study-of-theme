@@ -14,7 +14,7 @@
       "section-collection": {
         "type": "section-collection",
         "settings": {
-          "toppage_collection": "janbo-collection"
+          "toppage_collection": "トップページコレクション"
         }
       },
       "section-product": {
@@ -39,7 +39,7 @@
           "45c03047-30a4-4655-8a83-7cc30e690288": {
             "type": "featured_collection",
             "settings": {
-              "collection": "janbo-collection"
+              "collection": "トップページコレクション"
             }
           },
           "fbf30ffc-97e3-4ef4-914f-87fa9fb763ab": {
@@ -99,7 +99,7 @@
           "e7a4f69e-4316-4c03-8b7b-b916b52ea03d": {
             "type": "featured_collection",
             "settings": {
-              "collection": "janbo-collection"
+              "collection": "トップページコレクション"
             }
           },
           "22a50bfa-e255-480a-adcf-f80ca8308b19": {
