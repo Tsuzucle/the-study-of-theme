@@ -1,7 +1,7 @@
 <section class="sec04 sec">
     <div class="items-wrapper flex">
         {%- for block in section.blocks -%}
-            {% render 'card-collection-test', collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
+            {% render 'card-collection-custom', collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
         {%- endfor -%}
     </div>
 </section>
@@ -11,7 +11,6 @@
 {
     "name": "t:sections.collection-list.name",
     "tag": "section",
-    "class": "section section-collection-list",
     "max_blocks": 15,
     "settings": [
     ],
