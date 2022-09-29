@@ -14,19 +14,13 @@
       "section-collection": {
         "type": "section-collection",
         "settings": {
-          "toppage_collection": ""
+          "toppage_collection": "トップページコレクション"
         }
       },
       "section-product": {
         "type": "section-product",
         "settings": {
-          "title": "Collections",
-          "productA": "シャバ臓焼き-冷凍"
-        }
-      },
-      "section-collection-list-test": {
-        "type": "section-collection-list-test",
-        "settings": {
+          "productA": "商品1"
         }
       },
       "section-introduce": {
@@ -36,6 +30,60 @@
       },
       "footer": {
         "type": "footer",
+        "settings": {
+        }
+      },
+      "section-collection-list": {
+        "type": "section-collection-list",
+        "blocks": {
+          "45c03047-30a4-4655-8a83-7cc30e690288": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "トップページコレクション"
+            }
+          },
+          "fbf30ffc-97e3-4ef4-914f-87fa9fb763ab": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "0671eb23-0527-44d3-8742-0f5bfea52f5d": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "bff8727f-7df9-4e5e-9e30-7afc9fa8c0c0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "2b8ed5be-27dd-44d0-9196-5cf98e4142bf": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "45c03047-30a4-4655-8a83-7cc30e690288",
+          "fbf30ffc-97e3-4ef4-914f-87fa9fb763ab",
+          "0671eb23-0527-44d3-8742-0f5bfea52f5d",
+          "bff8727f-7df9-4e5e-9e30-7afc9fa8c0c0",
+          "2b8ed5be-27dd-44d0-9196-5cf98e4142bf"
+        ],
+        "settings": {
+        }
+      },
+      "section-special": {
+        "type": "section-special",
+        "settings": {
+        }
+      },
+      "section-category": {
+        "type": "section-category",
         "settings": {
         }
       }
